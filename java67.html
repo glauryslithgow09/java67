@@ -1,0 +1,63 @@
+<!--<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Glaurys</title>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+
+    <div style="width:500px;height:500px;background:#fffb00" id="recuadro1">
+        <h1>Conteo</h1>
+        <p id="cantidad">100</p>
+    </div>
+
+    <script>
+        addEventListener('DOMContentLoaded', inicio, false);
+
+        function inicio() {
+            document.getElementById('recuadro1').addEventListener('mousemove', mover, false);
+        }
+
+        function mover() {
+            var y = parseInt(document.getElementById('cantidad').innerHTML);
+            y++;
+            document.getElementById('cantidad').innerHTML = y;
+        }
+    </script>
+
+</body>
+
+</html>-->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Contraseña</title>
+    <meta charset="UTF-8">
+</head>
+
+<body style="background-color: darkred;">
+    <h1>Contraseña</h1>
+    <input type="password" id="clave" maxlength="15" size="15">
+    <br>
+    <p>caracteres que faltan:<span id="cantidad">15</span></p>
+
+    <script>
+        addEventListener('DOMContentLoaded', inicio, false);
+
+        function inicio() {
+            document.getElementById('clave').addEventListener('keyup', presion, false);
+        }
+
+        function presion() {
+            var canti = document.getElementById('clave').value.length;
+            var disponibles = 15 - parseInt(canti);
+            document.getElementById('cantidad').innerHTML = disponibles;
+        }
+    </script>
+
+</body>
+
+</html>
